@@ -124,6 +124,10 @@ section#ourteam p {
     text-align: center;
 }
 
+section#ourteam p.other {
+    margin-top: 50px;
+}
+
 section#ourteam div.person-tile {
     border: 1px dashed #03000c;
     padding: 10px;
@@ -151,6 +155,10 @@ section#ourteam div.person-tile p {
 }
 
 /* FOOTER */
+
+footer {
+    border-top: 1px solid black;
+}
 
 footer div.wrapper-foot {
     display: flex;
