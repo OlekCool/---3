@@ -1,17 +1,31 @@
 /* GENERAL */
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
     background-color: rgb(225, 240, 253);
 }
 
-h1, h2, h3, h4, h5, h6 {
+h1, h3, h4, h5, h6 {
     text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: bold;
+    color: #000;
+    font-size: 1.2em;
+}
+
+h2 {
+    text-align: center;
+    font-family: 'Quicksand', sans-serif;
+    font-weight: 900;
+    color: #121;
+    font-size: 2em;
 }
 
 ul {
     font-size: 18px;
+    line-height: 24px;
+    color: #333;
+    font-family: 'Quicksand', sans-serif;
 }
 
 section {
@@ -28,6 +42,7 @@ section h2 {
 
 section p {
     font-size: 18px;
+    line-height: 28px;
 }
 
 footer {
@@ -41,6 +56,10 @@ div.wrapper {
     flex-direction: row;
     justify-content: space-evenly;
     margin-top: 50px;
+}
+
+p {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 /* HEADER */ 
@@ -60,6 +79,7 @@ header nav ul {
     margin: 10px;
     padding: 10px;
     display: flex;
+    justify-content: flex-end;
 }
 
 header nav ul li {
@@ -70,10 +90,11 @@ header nav ul li a {
     color: #000000;
     text-decoration: none;
     font-size: 20px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 header nav ul li a:hover {
-    color: #000000c0;
+    color: #9c8000;
     text-decoration: underline;
     font-size: 20px;
 }
@@ -114,7 +135,7 @@ section#projects div.project-tile h3 {
 
 section#projects div.project-tile p {
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     margin-bottom: 30px;
 }
 
@@ -126,6 +147,7 @@ section#ourteam p {
 
 section#ourteam p.other {
     margin-top: 50px;
+    margin-bottom: -30px;
 }
 
 section#ourteam div.person-tile {
@@ -150,7 +172,7 @@ section#ourteam div.person-tile h3 {
 
 section#ourteam div.person-tile p {
     text-align: center;
-    font-weight: 700;
+    font-weight: 500;
     margin-top: 30px;
 }
 
@@ -165,12 +187,12 @@ footer div.wrapper-foot {
     flex-wrap: wrap;
     flex-direction: row;
     justify-content: space-evenly;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 footer div.wrapper-foot div.col {
     width: 40%;
-    margin: 20px auto;
+    margin: 10px auto;
     text-align: center;
 }
 
@@ -194,12 +216,20 @@ footer div.wrapper-foot div.col ul li {
 }
 
 footer div.wrapper-foot div.col ul li a {
-    color: #000000;
+    color: #110041c0;
+    font-family: 'Quicksand', sans-serif;
+    font-size: 1em;
+    text-decoration: none;
 }
 
 footer div.wrapper-foot div.col ul li a:hover {
-    color: #000000c0;
-    text-decoration: underline;
+    color: #be0000;
+}
+
+footer p {
+    text-align: center;
+    color: #333;
+    opacity: 65%;
 }
 
 
