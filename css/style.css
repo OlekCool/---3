@@ -1,8 +1,8 @@
 /* GENERAL */
-
 body {
     margin: 0;
     background-color: rgb(225, 240, 253);
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
 h1, h3, h4, h5, h6 {
@@ -48,9 +48,10 @@ section p {
 footer {
     background-color: rgb(0, 168, 168);
     padding: 25px;
+    border-top: 1px solid black;
 }
 
-div.wrapper {
+div.wrapper, footer div.wrapper-foot {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
@@ -58,23 +59,23 @@ div.wrapper {
     margin-top: 50px;
 }
 
-p {
-    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-}
-
-/* HEADER */ 
-
+/* HEADER */
 header {
     background-color: #00fff2;
     padding: 10px;
-    height: 100px;
+    min-height: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     border-bottom: 1px solid #000000;
 }
 
-header nav ul {
+header nav.visible {
+    width: 80%;
+    margin: 0 auto;
+}
+
+header nav.visible ul {
     list-style: none;
     margin: 10px;
     padding: 10px;
@@ -82,21 +83,21 @@ header nav ul {
     justify-content: flex-end;
 }
 
-header nav ul li {
-    margin-right: 50px;
+header nav.visible ul li {
+    margin-right: 40px;
+    text-align: center;
 }
 
-header nav ul li a {
+header nav.visible ul li a {
     color: #000000;
     text-decoration: none;
     font-size: 20px;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
-header nav ul li a:hover {
+header nav.visible ul li a:hover {
     color: #9c8000;
     text-decoration: underline;
-    font-size: 20px;
 }
 
 /* WHAT WE DO */
@@ -108,12 +109,11 @@ section#ourexperience ul{
 }
 
 /* PROJECTS */
-
 section#projects p {
     text-align: center;
 }
 
-section#projects div.project-tile {
+section#projects div.project-tile, section#ourteam div.person-tile {
     border: 1px dashed #03000c;
     padding: 10px;
     border-radius: 16px;
@@ -122,25 +122,24 @@ section#projects div.project-tile {
     margin-top: 30px;
 }
 
-section#projects div.project-tile .img {
+section#projects div.project-tile .img, section#ourteam div.person-tile .img {
     margin: 0 auto;
     width: fit-content;
 }
 
-section#projects div.project-tile h3 {
+section#projects div.project-tile h3, section#ourteam div.person-tile h3 {
     text-align: center;
     font-weight: 900;
     margin-bottom: 30px;
 }
 
-section#projects div.project-tile p {
+section#projects div.project-tile p, section#ourteam div.person-tile p {
     text-align: center;
     font-weight: 500;
     margin-bottom: 30px;
 }
 
 /* OUR TEAM */
-
 section#ourteam p {
     text-align: center;
 }
@@ -150,46 +149,7 @@ section#ourteam p.other {
     margin-bottom: -30px;
 }
 
-section#ourteam div.person-tile {
-    border: 1px dashed #03000c;
-    padding: 10px;
-    border-radius: 16px;
-    margin: 10px;
-    min-width: 300px;
-    margin-top: 30px;
-}
-
-section#ourteam div.person-tile .img {
-    margin: 0 auto;
-    width: fit-content;
-}
-
-section#ourteam div.person-tile h3 {
-    text-align: center;
-    font-weight: 900;
-    margin-bottom: 30px;
-}
-
-section#ourteam div.person-tile p {
-    text-align: center;
-    font-weight: 500;
-    margin-top: 30px;
-}
-
 /* FOOTER */
-
-footer {
-    border-top: 1px solid black;
-}
-
-footer div.wrapper-foot {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    justify-content: space-evenly;
-    margin-top: 30px;
-}
-
 footer div.wrapper-foot div.col {
     width: 40%;
     margin: 10px auto;
@@ -232,4 +192,61 @@ footer p {
     opacity: 65%;
 }
 
+/* MEDIA QUERIES FOR ADAPTIVITY */
 
+@media (max-width: 576px) {
+    header nav.visible ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    header nav.visible ul li {
+        margin: 0;
+    }
+
+    header nav.visible ul li a {
+        font-size: 12px;
+    }
+
+    section {
+        padding: 30px 10px 50px 10px;
+    }
+
+    section#projects div.project-tile, section#ourteam div.person-tile {
+        min-width: 100%;
+    }
+}
+
+@media (min-width: 577px) and (max-width: 992px) {
+    header nav.visible ul li a {
+        font-size: 16px;
+    }
+
+    section {
+        padding: 40px 20px 60px 20px;
+    }
+
+    section#projects div.project-tile, section#ourteam div.person-tile {
+        min-width: calc(50% - 20px);
+    }
+}
+
+@media (min-width: 993px) and (max-width: 1200px) {
+    section {
+        padding: 50px 30px 70px 30px;
+    }
+
+    section#projects div.project-tile, section#ourteam div.person-tile {
+        min-width: calc(33.33% - 20px);
+    }
+}
+
+@media (min-width: 1200px) {
+    section {
+        padding: 50px 30px 70px 30px;
+    }
+
+    section#projects div.project-tile, section#ourteam div.person-tile {
+        min-width: calc(25% - 20px);
+    }
+}
