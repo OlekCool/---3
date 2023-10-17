@@ -59,6 +59,32 @@ div.wrapper, footer div.wrapper-foot {
     margin-top: 50px;
 }
 
+/* LIGHTBOX */
+.modal {
+    display: none;
+    position: fixed;
+    width: 82vw;
+    margin: 18vh calc((100vw - 80vw)/2 - 1.8vw);
+    margin-top: 19.3vh;
+    background-color: rgba(255, 255, 255);
+    border: 1px solid black;
+    padding: 10px;
+    z-index: 999;
+    overflow: scroll;
+    font-size: 15px;
+    text-align: center;
+}
+
+.modal-open {
+    overflow: hidden;
+}
+
+.modal .modal-content span {
+    font-size: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
 /* HEADER */
 header {
     background-color: #00fff2;
