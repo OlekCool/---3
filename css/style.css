@@ -276,3 +276,45 @@ footer p {
         min-width: calc(25% - 20px);
     }
 }
+
+/* calculation form */
+footer#contactus h4{
+    margin-top: 60px;
+    font-size: 1.4em;
+}
+
+div.calc_form{
+    background-color: rgb(206, 232, 255);
+    height: 600px;
+    width: 800px;
+    margin: 0 auto;
+    border: 1px solid black;
+}
+
+div.calc_form form{
+    height: 450px;
+    width: 600px;
+    margin: 50px auto;
+    border: 1px solid black;
+    background-color: rgb(235, 245, 255);
+}
+
+div.calc_form form label{
+    margin-left: 40px;
+}
+
+div.calc_form form input{
+    margin-top: 20px;
+}
+
+div.calc_form form button{
+    margin-left: 50px;
+}
+
+.wrong_radius{
+    border: 1px solid red;
+}
+
+.wrong_height{
+    border: 1px solid red;
+}

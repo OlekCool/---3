@@ -269,9 +269,38 @@
         </div>
         
         <p><sub>® all rights reserved</sub></p>
+
+        <h4>Calculation form</h4>
+        <div class="calc_form">
+            <form action="/submit" method="post">
+                <p>3) A square of cylinder surface</p>
+
+                <label for="radius">Enter radius:</label>
+                <input type="text" id="radius" name="radius" required><br>
+                <p id="radius_error" class="error"></p>
+    
+                <label for="height">Enter height:</label>
+                <input type="text" id="height" name="height" required><br>
+                <p id="height_error" class="error"></p>
+
+                <label for="result">Result:</label>
+                <input type="text" id="result" name="result"><br>
+
+                <label for="addinfo">Show additional message:</label>
+                <input type="checkbox" id="addinfo" onchange="toggleInfo()"><br><br>
+
+                <button id="calc" type="button">Calculate!</button>
+                <button id="clear" type="button">Clean form!</button>
+            </form>
+
+            <div id="additionalinfo" style="display:none; width:80%; margin-left: 10%; margin-top: -10px;">
+                <p>Потрібно ввести числові значення висоти та радіуса циліндра, і щоб ці значення були > 0, і тоді буде все добре.</p>
+            </div>
+        </div>
     </footer>
 
     
+
     <script src="js/form.js"></script>
 </body>
 </html>
