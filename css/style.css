@@ -185,6 +185,36 @@ section#ourteam p.other {
   margin-bottom: -30px;
 }
 
+/* INTEREST FACTS */
+#interest_facts {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.fact {
+  box-sizing: border-box;
+  width: 45%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #ccc;
+  text-align: center;
+  border: 1px dashed #03000c;
+  padding: 10px;
+  border-radius: 16px;
+}
+
+.likes-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.likes-section button {
+  margin-right: 5px;
+}
+
 /* FOOTER */
 footer div.wrapper-foot div.col {
   width: 40%;
